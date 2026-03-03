@@ -1,0 +1,13 @@
+pub const ELFOSABI_NONE: u8 = 0;
+pub const ELFOSABI_HPUX: u8 = 1;
+pub const ELFOSABI_NETBSD: u8 = 2;
+pub const ELFOSABI_LINUX: u8 = 3;
+pub const ELFOSABI_SOLARIS: u8 = 6;
+pub const ELFOSABI_AIX: u8 = 7;
+pub const ELFOSABI_IRIX: u8 = 8;
+pub const ELFOSABI_FREEBSD: u8 = 9;
+pub const ELFOSABI_TRU64: u8 = 10;
+pub const ELFOSABI_MODESTO: u8 = 11;
+pub const ELFOSABI_OPENBSD: u8 = 12;
+pub const ELFOSABI_OPENVMS: u8 = 13;
+pub const ELFOSABI_NSK: u8 = 14;
