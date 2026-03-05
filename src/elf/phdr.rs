@@ -1,26 +1,30 @@
 use crate::elf::types::*;
 
- pub struct Elf32Phdr {
-     pub p_type: Elf32Word,
-     pub p_offset: Elf32Off,
-     pub p_vaddr: Elf32Addr,
-     pub p_paddr: Elf32Addr,
-     pub p_filesz: Elf32Word,
-     pub p_memsz: Elf32Word,
-     pub p_flags: Elf32Word,
-     pub p_align: Elf32Word
- }
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct Elf32Phdr {
+    pub p_type: Elf32Word,
+    pub p_offset: Elf32Off,
+    pub p_vaddr: Elf32Addr,
+    pub p_paddr: Elf32Addr,
+    pub p_filesz: Elf32Word,
+    pub p_memsz: Elf32Word,
+    pub p_flags: Elf32Word,
+    pub p_align: Elf32Word,
+}
 
- pub struct Elf64Phdr {
-     pub p_type: Elf64Word,
-     pub p_flags: Elf64Word,
-     pub p_offset: Elf64Off,
-     pub p_vaddr: Elf64Addr,
-     pub p_paddr: Elf64Addr,
-     pub p_filsz: Elf64Xword,
-     pub p_memsz: Elf64Xword,
-     pub p_align: Elf64Xword
- }
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct Elf64Phdr {
+    pub p_type: Elf64Word,
+    pub p_flags: Elf64Word,
+    pub p_offset: Elf64Off,
+    pub p_vaddr: Elf64Addr,
+    pub p_paddr: Elf64Addr,
+    pub p_filsz: Elf64Xword,
+    pub p_memsz: Elf64Xword,
+    pub p_align: Elf64Xword,
+}
 
 pub const PT_NULL: u32 = 0;
 pub const PT_LOAD: u32 = 1;

@@ -1,10 +1,6 @@
+use crate::bits64::{print_ehdr::print_ehdr, print_phdrs::print_phdrs, print_shdrs::print_shdrs};
 use crate::elf;
 use crate::parser::Args;
-use crate::bits64::{
-    print_ehdr::print_ehdr,
-    print_shdrs::print_shdrs,
-    print_phdrs::print_phdrs
-};
 
 pub fn main64(data: &Vec<u8>, args: &Args) {
     let ehdr: elf::Elf64Ehdr = unsafe { std::ptr::read(data.as_ptr() as *const elf::Elf64Ehdr) };
@@ -27,7 +23,7 @@ pub fn main64(data: &Vec<u8>, args: &Args) {
     let phdrs: &[elf::Elf64Phdr] = unsafe {
         std::slice::from_raw_parts(
             data[phdr_start..phdr_end].as_ptr() as *const elf::Elf64Phdr,
-            ehdr.e_phnum as usize
+            ehdr.e_phnum as usize,
         )
     };
 
@@ -40,6 +36,6 @@ pub fn main64(data: &Vec<u8>, args: &Args) {
     }
 
     if args.phdr {
-        print_phdrs(&ehdr, phdrs);
+        print_phdrs(&ehdr, phdrs, data);
     }
 }

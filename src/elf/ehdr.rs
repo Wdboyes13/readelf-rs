@@ -18,7 +18,7 @@ pub struct Elf32Ehdr {
     pub e_phnum: Elf32Half,
     pub e_shentsize: Elf32Half,
     pub e_shnum: Elf32Half,
-    pub e_shstrndx: Elf32Half
+    pub e_shstrndx: Elf32Half,
 }
 
 #[repr(C)]
@@ -37,7 +37,7 @@ pub struct Elf64Ehdr {
     pub e_phnum: Elf64Half,
     pub e_shentsize: Elf64Half,
     pub e_shnum: Elf64Half,
-    pub e_shstrndx: Elf64Half
+    pub e_shstrndx: Elf64Half,
 }
 
 pub const ET_NONE: u16 = 0;

@@ -1,3 +1,1 @@
-pub fn main32(data: &Vec<u8>) {
-
-}
+pub fn main32(_data: &Vec<u8>) {}

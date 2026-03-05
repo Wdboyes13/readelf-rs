@@ -12,7 +12,7 @@ pub struct Elf32Shdr {
     pub sh_link: Elf32Word,
     pub sh_info: Elf32Word,
     pub sh_addralign: Elf32Word,
-    pub sh_entsize: Elf32Word
+    pub sh_entsize: Elf32Word,
 }
 
 #[repr(C)]
@@ -27,7 +27,7 @@ pub struct Elf64Shdr {
     pub sh_link: Elf64Word,
     pub sh_info: Elf64Word,
     pub sh_addralign: Elf64Xword,
-    pub sh_entsize: Elf64Xword
+    pub sh_entsize: Elf64Xword,
 }
 
 pub const SHT_NULL: u32 = 0;
