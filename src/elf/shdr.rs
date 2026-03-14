@@ -47,6 +47,9 @@ pub const SHT_FINI_ARRAY: u32 = 15;
 pub const SHT_PREINIT_ARRAY: u32 = 16;
 pub const SHT_GROUP: u32 = 17;
 pub const SHT_SYMTAB_SHNDX: u32 = 18;
+pub const SHT_GNU_VERDEF: u32 = 0x6ffffffd;
+pub const SHT_GNU_VERNEED: u32 = 0x6ffffffe;
+pub const SHT_GNU_VERSYM: u32 = 0x6fffffff;
 
 pub const SHF_WRITE: u32 = 0x1;
 pub const SHF_ALLOC: u32 = 0x2;

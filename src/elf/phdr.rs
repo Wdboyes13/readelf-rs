@@ -35,6 +35,10 @@ pub const PT_SHLIB: u32 = 5;
 pub const PT_PHDR: u32 = 6;
 pub const PT_TLS: u32 = 7;
 
+pub const PT_GNU_EH_FRAME: u32 = 0x6474e550;
+pub const PT_GNU_STACK: u32 = 0x6474e551;
+pub const PT_GNU_RELRO: u32 = 0x6474e552;
+
 pub const PF_X: u32 = 0x1;
 pub const PF_W: u32 = 0x2;
 pub const PF_R: u32 = 0x4;
