@@ -21,6 +21,9 @@ fn shdr_type_text(shdr: &Elf64Shdr) -> &str {
         SHT_PREINIT_ARRAY => "PREINIT_ARRAY",
         SHT_GROUP => "GROUP",
         SHT_SYMTAB_SHNDX => "SYMTAB_SHNDX",
+        SHT_GNU_VERDEF => "VERDEF",
+        SHT_GNU_VERNEED => "VERNEED",
+        SHT_GNU_VERSYM => "VERSYM",
         _ => "UNKNOWN",
     }
 }

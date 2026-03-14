@@ -12,6 +12,9 @@ fn ptype_str(p_type: u32) -> String {
         PT_SHLIB => "SHLIB",
         PT_PHDR => "PHDR",
         PT_TLS => "TLS",
+        PT_GNU_EH_FRAME => "GNU_EH_FRAME",
+        PT_GNU_STACK => "GNU_STACK",
+        PT_GNU_RELRO => "GNU_RELRO",
         _ => "UNKNOWN",
     }
     .to_string()
@@ -60,7 +63,7 @@ pub fn print_phdrs(ehdr: &Elf64Ehdr, phdrs: &[Elf64Phdr], data: &[u8]) {
     println!("\nElf file type is {}", get_elf_type64(ehdr));
     println!("Entry point {:#x}", ehdr.e_entry);
     println!(
-        "There are {} program headers, starting at offset {}",
+        "There are {} program headers, starting at offset {}\n",
         ehdr.e_phnum, ehdr.e_phoff
     );
 
